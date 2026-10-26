@@ -73,39 +73,7 @@ Trocar a frase, sair do jardim, recomeçar ou ocultar a aba interrompe a leitura
 
 Testes em DOM e voz simulados cobriram as falas, teclado por botão nativo, progresso, reinício, suporte ausente, seleção de voz pt-BR, interrupção, troca rápida de frases, eventos antigos de síntese e erros de voz. Ainda é necessário ouvir e conferir o resultado em navegador real.
 
-## A surpresa da Sara
 
-A chegada e as falas do Pingo foram personalizadas para Sara. A flor rosa guarda a lembrança do primeiro girassol interativo, baseada na história que já constava na carta original, sem acrescentar datas ou acontecimentos.
-
-O progresso aquece a luz do cenário; ao receber os quatro carinhos, surgem flores e uma segunda borboleta. O botão final leva à despedida do Pingo, onde Sara pode ouvir o recado, voltar ao jardim ou abrir sua carta. A carta tem acabamento de papel e assinatura em destaque.
-
-Ao final, Sara pode visualizar e baixar `assets/sara-pingo.svg`, um cartão vetorial independente com o Pingo e o nome dela. O desenho do cartão foi criado para este projeto e não precisa de fontes, imagens ou serviços externos. Em navegadores que abrirem o arquivo em vez de baixá-lo, use a opção de salvar. A pasta `assets/` deve ser publicada junto com o site.
-
-Verificação: o percurso completo foi executado em DOM simulado, com e sem movimento reduzido, incluindo despedida, retorno, carta e reinício. O cartão passou pela validação XML e pela conferência de ausência de dependências externas. A renderização final no celular e a reprodução da voz ainda precisam ser conferidas em navegador real.
-
-## Carta, PNG e conversa automática
-
-A carta para Sara foi reescrita com um tom mais romântico. O cartão exibido e baixado agora é `assets/sara-pingo.png`, em 1440 × 1920 pixels, pronto para salvar como imagem no celular. O SVG original permanece como fonte alternativa; o PNG foi renderizado e conferido visualmente. `tools/render-card.ps1` recria a versão raster no Windows com System.Drawing.
-
-O Pingo agora fala automaticamente ao entrar no jardim e a cada interação, quando a síntese estiver disponível. O clique de entrada inicia a experiência; os controles permitem silenciar e reativar a voz. Alguns navegadores podem bloquear a fala automática: nesse caso, o site explica como ativá-la com um toque. As respostas variam ao repetir carinhos e clicar no personagem, sem duplicar o progresso. A opção de silenciar é mantida durante a visita, inclusive ao recomeçar. Não há falas iniciadas antes de entrar.
-
-As frases foram encurtadas e pontuadas para soar mais conversadas, mas a voz ainda usa o sintetizador do aparelho. Isso não equivale a áudio gerado por um serviço de voz natural. Sem suporte, o Pingo continua conversando por escrito. Testes simulados cobriram fala automática, variação de respostas, silenciar/reativar, eventos antigos, bilhete, despedida, carta e reinício. A reprodução real da voz ainda precisa ser ouvida no navegador do celular.
-
-## Ritmo, gravações e compartilhamento
-
-O Pingo termina uma fala antes de iniciar a próxima. Até quatro próximas falas são guardadas; ao ultrapassar esse limite, a última é substituída para evitar uma fila longa. Os botões de pular fala interrompem a atual e seguem para a próxima. Navegar, silenciar, recomeçar ou ocultar a aba limpa a fila. Um prazo de segurança evita travamento quando o aparelho não envia os eventos de fim da voz.
-
-As mensagens extras dos carinhos agora ficam em detalhes recolhidos. O balão é o foco da conversa. O girassol acompanha a borboleta com os olhos, fecha os olhos ao receber água e reage ao toque. As animações respeitam movimento reduzido.
-
-`assets/audio/recordings.js` permite cadastrar gravações naturais, preferidas em relação à síntese. Ele começa vazio: nenhum MP3 é solicitado até haver gravações reais cadastradas. `assets/audio/lines.json` prepara as 19 falas e os nomes de arquivos; a direção de voz e instruções estão em `assets/audio/README.md`. A integração de geração de voz Runway foi localizada, mas ainda precisa ser conectada para gerar os arquivos. A voz natural permanece pendente.
-
-O botão de compartilhar o PNG aparece apenas quando o aparelho permite compartilhar arquivos e o arquivo foi preparado. O compartilhamento só ocorre ao tocar no botão e escolher o destino. Sem suporte, o download e a imagem para salvar continuam disponíveis. A funcionalidade exige um contexto seguro e depende do navegador: https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share
-
-A carta final e o segredo foram comparados ao conteúdo anterior e permanecem idênticos. Testes em DOM, áudio e compartilhamento simulados cobriram fila, interrupção, ordem, eventos antigos, gravações, falhas, reinício e compartilhamento. O teste visual em celular real continua pendente porque não havia navegador conectado na sessão.
-
-## Redesign botânico
-
-O site ganhou uma composição nova em tons de papel, verde sálvia e dourado, com tipografia Cormorant Garamond e DM Sans, uma capa ilustrada em `assets/garden-vignette.svg` e um jardim em duas colunas no computador. No celular, cenário e conversa se organizam em sequência. A folha `style.css` foi reescrita para substituir as regras acumuladas dos ciclos anteriores.
 
 A carta, assinatura e segredo foram preservados exatamente. As interações, o áudio opcional, a fila de falas, o cartão PNG, o compartilhamento, o envelope e o reinício continuam disponíveis.
 
