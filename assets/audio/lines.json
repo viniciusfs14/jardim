@@ -1,0 +1,78 @@
+{
+  "welcome": {
+    "text": "Sara? Oi… eu sou o Pingo! Ele me falou de você. Chega mais. Esse cantinho é seu.",
+    "src": "assets/audio/welcome.mp3"
+  },
+  "farewell": {
+    "text": "Sara… minha parte era florescer. Agora é com ele. Tem uma cartinha te esperando. Vai lá. Eu cuido do jardim pra você.",
+    "src": "assets/audio/farewell.mp3"
+  },
+  "water": {
+    "text": "Ah… que delícia! Era um golinho desses que faltava. Obrigado, Sara.",
+    "src": "assets/audio/water.mp3"
+  },
+  "sun": {
+    "text": "Hum… agora sim. Um solzinho no rosto. Acho que eu podia ficar aqui o dia inteiro.",
+    "src": "assets/audio/sun.mp3"
+  },
+  "butterfly": {
+    "text": "Olha quem chegou! Eu trouxe uma amiga. Fiquei com um pouquinho de vergonha de te conhecer sozinho.",
+    "src": "assets/audio/butterfly.mp3"
+  },
+  "note": {
+    "text": "Psiu… esse bilhete é pra você. Ele que escreveu, tá? Eu só prometi entregar com carinho.",
+    "src": "assets/audio/note.mp3"
+  },
+  "bloom": {
+    "text": "Sara, olha só! Eu floresci! Foi você. Vem ver o que estava guardado aqui.",
+    "src": "assets/audio/bloom.mp3"
+  },
+  "water-repeat-0": {
+    "text": "Mais água? Você cuida mesmo de mim, hein. Daqui a pouco eu viro um jardim inteiro!",
+    "src": "assets/audio/water-repeat-0.mp3"
+  },
+  "water-repeat-1": {
+    "text": "Prontinho… agora eu tô bem cuidado. Pode ficar aqui comigo um pouquinho.",
+    "src": "assets/audio/water-repeat-1.mp3"
+  },
+  "sun-repeat-0": {
+    "text": "Você também gosta desse quentinho? Eu acho que o jardim fica mais bonito com você aqui.",
+    "src": "assets/audio/sun-repeat-0.mp3"
+  },
+  "sun-repeat-1": {
+    "text": "Acho que achei meu lugar favorito. Bem aqui, nesse solzinho, fazendo companhia pra você.",
+    "src": "assets/audio/sun-repeat-1.mp3"
+  },
+  "butterfly-repeat-0": {
+    "text": "Ela voltou! Acho que gostou de você também. Bom gosto ela tem.",
+    "src": "assets/audio/butterfly-repeat-0.mp3"
+  },
+  "butterfly-repeat-1": {
+    "text": "Vai com calma, borboleta… a Sara acabou de chegar. A gente tem tempo.",
+    "src": "assets/audio/butterfly-repeat-1.mp3"
+  },
+  "note-repeat-0": {
+    "text": "Quer ler de novo? Pode. Tem carinho que dá vontade de guardar mais de uma vez.",
+    "src": "assets/audio/note-repeat-0.mp3"
+  },
+  "chat-0": {
+    "text": "Sara… posso te contar uma coisa? Ele ficou todo bobo fazendo esse jardim. Mas faz de conta que não fui eu que contei.",
+    "src": "assets/audio/chat-0.mp3"
+  },
+  "chat-1": {
+    "text": "Eu ensaiei um oi bem bonito. Aí você chegou… e eu esqueci tudo. Acontece nas melhores flores.",
+    "src": "assets/audio/chat-1.mp3"
+  },
+  "chat-2": {
+    "text": "Pode ficar. Sério. Hoje eu não tenho nada mais importante pra fazer do que te fazer companhia.",
+    "src": "assets/audio/chat-2.mp3"
+  },
+  "chat-3": {
+    "text": "Eu sou pequenininho… mas esse carinho aqui? Esse não coube só em mim. Virou um jardim.",
+    "src": "assets/audio/chat-3.mp3"
+  },
+  "chat-4": {
+    "text": "Se esse cantinho te arrancou um sorriso… pronto. Meu dia já ficou mais bonito.",
+    "src": "assets/audio/chat-4.mp3"
+  }
+}

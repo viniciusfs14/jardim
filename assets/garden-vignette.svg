@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="720" viewBox="0 0 640 720" fill="none" role="img" aria-labelledby="garden-title garden-desc">
+  <title id="garden-title">Pingo, no jardim da Sara</title>
+  <desc id="garden-desc">Um girassol sorridente entre flores delicadas e folhas de sálvia, sob um arco iluminado pelo sol e duas pequenas borboletas.</desc>
+  <defs>
+    <linearGradient id="arch" x1="320" y1="40" x2="320" y2="670" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6EADD"/><stop offset=".58" stop-color="#EEF0E2"/><stop offset="1" stop-color="#D9DFBF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(434 188) rotate(90) scale(190 204)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8E5AC" stop-opacity=".77"/><stop offset="1" stop-color="#F8E5AC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="petal" x1="0" y1="-134" x2="0" y2="-28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F1D58D"/><stop offset=".58" stop-color="#DFB65F"/><stop offset="1" stop-color="#CB9D43"/>
+    </linearGradient>
+    <radialGradient id="heart" cx="0" cy="0" r="1" gradientTransform="translate(-13 -17) rotate(54) scale(83)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#987451"/><stop offset="1" stop-color="#70513C"/>
+    </radialGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="86" y2="-57" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6E8458"/><stop offset="1" stop-color="#9DAA75"/>
+    </linearGradient>
+    <clipPath id="arch-clip"><path d="M78 285C78 151 186 43 320 43s242 108 242 242v355H78V285Z"/></clipPath>
+    <path id="sun-petal" d="M-16-46C-28-77-21-121-4-137C0-141 4-140 9-133C28-107 25-69 14-45C6-34-8-34-16-46Z"/>
+    <g id="little-flower">
+      <path d="M0 0C-10-18-25-13-20 0C-32 8-23 22-9 15C-5 32 12 30 12 15C27 19 32 3 17-3C22-19 5-24 0-10Z" fill="currentColor"/>
+      <circle cx="0" cy="4" r="5" fill="#C19C56"/>
+    </g>
+    <g id="sprig">
+      <path d="M0 0C6-32 4-69-7-107" stroke="#7F8E64" stroke-width="2" stroke-linecap="round"/>
+      <path d="M1-25C-19-24-29-35-30-49C-13-48-3-39 1-25ZM4-48C20-52 28-65 24-78C9-72 3-60 4-48ZM1-70C-17-72-25-84-23-96C-8-92-1-83 1-70ZM-5-96C7-106 8-120 2-130C-9-119-11-108-5-96Z" fill="#9DAA81"/>
+    </g>
+    <g id="butterfly">
+      <path d="M0 2C-4-16-23-27-26-15C-29-4-18 5-4 7C-19 5-24 16-16 21C-8 25-1 16 1 7" fill="#C2856E"/>
+      <path d="M2 2C9-16 26-21 28-9C29 2 18 9 5 8C20 10 21 21 13 24C5 26 2 16 1 7" fill="#D8A58A"/>
+      <path d="M1 0L2 15M1 1L-3-5M2 1L7-4" stroke="#6C7054" stroke-width="2" stroke-linecap="round"/>
+      <path d="M-17-9L-5 4M19-5L7 6" stroke="#F6E9D5" stroke-opacity=".6" stroke-width="1.4" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <!-- The softly imperfect frame keeps the illustration separate from the page. -->
+  <path d="M64 285C64 143 179 28 320 28s256 115 256 257v365H64V285Z" stroke="#C6CCB1" stroke-width="1"/>
+  <path d="M78 285C78 151 186 43 320 43s242 108 242 242v355H78V285Z" fill="url(#arch)"/>
+  <g clip-path="url(#arch-clip)">
+    <path d="M78 285C78 151 186 43 320 43s242 108 242 242v355H78V285Z" fill="url(#glow)"/>
+    <circle cx="435" cy="178" r="56" fill="#F3D99A"/>
+    <circle cx="435" cy="178" r="66" stroke="#E8D39A" stroke-opacity=".65"/>
+    <path d="M112 170H178M131 160H159M481 269H533M495 259H518" stroke="#FBFAF0" stroke-width="3" stroke-linecap="round" opacity=".65"/>
+    <path d="M33 504C141 429 230 480 325 468C422 456 473 416 607 467V663H33V504Z" fill="#C9D1B2"/>
+    <path d="M43 549C174 474 250 541 355 527C442 515 500 481 591 515V667H43V549Z" fill="#ABB992"/>
+    <path d="M34 599C157 540 265 577 354 565C444 553 523 569 605 546V682H34V599Z" fill="#8F9F76"/>
+    <path d="M70 627C223 610 381 637 569 611" stroke="#DDE1C4" stroke-opacity=".3" stroke-width="1.2"/>
+    <path d="M70 650C223 633 383 657 569 634" stroke="#DDE1C4" stroke-opacity=".3" stroke-width="1.2"/>
+    <g opacity=".45" stroke="#617651" stroke-width="1.5" stroke-linecap="round">
+      <path d="M112 653L108 636M118 653L124 632M479 652L472 634M486 651L488 632M218 640L214 625M224 640L229 620"/>
+    </g>
+  </g>
+
+  <!-- Small stems reach beyond the frame like a pressed botanical print. -->
+  <use href="#sprig" transform="translate(104 650) rotate(-26) scale(1.27)"/>
+  <use href="#sprig" transform="translate(551 649) rotate(32) scale(-1.28 1.28)"/>
+  <use href="#sprig" transform="translate(158 641) rotate(-9) scale(.85)"/>
+  <use href="#sprig" transform="translate(497 645) rotate(9) scale(-.8 .8)"/>
+  <g stroke="#758863" stroke-width="3" stroke-linecap="round">
+    <path d="M179 643C177 596 162 566 150 533"/>
+    <path d="M466 644C464 594 480 573 491 542"/>
+    <path d="M234 648C235 621 226 604 217 587"/>
+    <path d="M413 649C414 624 427 613 431 594"/>
+  </g>
+  <use href="#little-flower" transform="translate(148 526) rotate(-13) scale(1.02)" color="#ECE8D3"/>
+  <use href="#little-flower" transform="translate(492 535) rotate(24) scale(.85)" color="#CC9580"/>
+  <use href="#little-flower" transform="translate(217 583) rotate(18) scale(.55)" color="#D3A18D"/>
+  <use href="#little-flower" transform="translate(432 590) rotate(-10) scale(.6)" color="#F2E7C8"/>
+  <path d="M179 608C159 601 151 588 153 577C170 583 177 593 179 608ZM467 607C483 594 495 595 505 600C492 614 480 615 467 607Z" fill="#8C9D75"/>
+
+  <!-- Pingo, shaped from warm, overlapping pieces of paper. -->
+  <ellipse cx="321" cy="651" rx="78" ry="9" fill="#6A7956" opacity=".12"/>
+  <path d="M322 404C312 478 324 563 320 645" stroke="#5F7951" stroke-width="13" stroke-linecap="round"/>
+  <path d="M320 540C286 489 246 481 232 492C233 532 280 554 320 551" fill="#869B68"/>
+  <path d="M322 568C357 515 396 505 416 513C416 553 372 582 321 579" fill="url(#leaf)" transform="translate(0 0)"/>
+  <path d="M246 499C277 521 293 531 316 544M327 573C356 549 377 532 403 520" stroke="#5F7951" stroke-opacity=".5" stroke-width="1.5" stroke-linecap="round"/>
+  <g transform="translate(321 351) rotate(-7)">
+    <g fill="url(#petal)">
+      <use href="#sun-petal"/>
+      <use href="#sun-petal" transform="rotate(25.7)"/>
+      <use href="#sun-petal" transform="rotate(51.4)"/>
+      <use href="#sun-petal" transform="rotate(77.1)"/>
+      <use href="#sun-petal" transform="rotate(102.8)"/>
+      <use href="#sun-petal" transform="rotate(128.5)"/>
+      <use href="#sun-petal" transform="rotate(154.2)"/>
+      <use href="#sun-petal" transform="rotate(180)"/>
+      <use href="#sun-petal" transform="rotate(205.7)"/>
+      <use href="#sun-petal" transform="rotate(231.4)"/>
+      <use href="#sun-petal" transform="rotate(257.1)"/>
+      <use href="#sun-petal" transform="rotate(282.8)"/>
+      <use href="#sun-petal" transform="rotate(308.5)"/>
+      <use href="#sun-petal" transform="rotate(334.2)"/>
+    </g>
+    <g stroke="#C49A4D" stroke-opacity=".32" stroke-width="1" stroke-linecap="round">
+      <path d="M0-63V-120M63 0H120M0 63V120M-63 0H-120"/>
+      <path d="M45-45L85-85M45 45L85 85M-45 45L-85 85M-45-45L-85-85"/>
+    </g>
+    <circle r="68" fill="#B58E52"/>
+    <circle r="61" fill="url(#heart)"/>
+    <g fill="#C7A678" opacity=".28">
+      <circle cx="-38" cy="-28" r="2"/><circle cx="-21" cy="-42" r="2"/><circle cx="-1" cy="-47" r="2"/><circle cx="20" cy="-42" r="2"/><circle cx="38" cy="-28" r="2"/>
+      <circle cx="-47" cy="-8" r="2"/><circle cx="-46" cy="15" r="2"/><circle cx="45" cy="-8" r="2"/><circle cx="46" cy="15" r="2"/>
+      <circle cx="-32" cy="40" r="2"/><circle cx="-14" cy="47" r="2"/><circle cx="10" cy="48" r="2"/><circle cx="31" cy="40" r="2"/>
+    </g>
+    <ellipse cx="-21" cy="-4" rx="4" ry="6" fill="#372F27"/>
+    <ellipse cx="21" cy="-4" rx="4" ry="6" fill="#372F27"/>
+    <circle cx="-22" cy="-6" r="1.2" fill="#F3E3C0"/>
+    <circle cx="20" cy="-6" r="1.2" fill="#F3E3C0"/>
+    <ellipse cx="-36" cy="13" rx="10" ry="5" fill="#CC8F77" opacity=".64"/>
+    <ellipse cx="36" cy="13" rx="10" ry="5" fill="#CC8F77" opacity=".64"/>
+    <path d="M-13 17C-5 28 5 28 13 17" stroke="#3E3028" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <use href="#butterfly" transform="translate(162 240) rotate(-19) scale(.78)"/>
+  <use href="#butterfly" transform="translate(477 369) rotate(24) scale(.56)"/>
+  <path d="M145 267C127 284 152 305 167 284C181 265 129 266 132 300" stroke="#9DAA81" stroke-width="1" stroke-dasharray="3 5" stroke-linecap="round" opacity=".65"/>
+  <g stroke="#B99A59" stroke-width="1.5" stroke-linecap="round" opacity=".65">
+    <path d="M213 174V186M207 180H219M470 443V453M465 448H475M376 117V125M372 121H380"/>
+  </g>
+  <circle cx="191" cy="388" r="2" fill="#C2A46D" opacity=".55"/>
+  <circle cx="443" cy="294" r="2" fill="#C2A46D" opacity=".55"/>
+  <path d="M217 688H423" stroke="#C9C9AF"/>
+  <path d="M315 685C310 679 303 684 308 690L320 701L332 690C337 684 330 679 325 685L320 690L315 685Z" fill="#C18B76"/>
+</svg>

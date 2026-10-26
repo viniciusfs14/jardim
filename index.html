@@ -1,0 +1,204 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f7f3e9">
+    <meta name="description" content="Para Sara: um pequeno jardim, um girassol chamado Pingo e uma surpresa feita com carinho.">
+    <title>Sara, tem um girassol te esperando 🌻</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/sunflower.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="assets/audio/recordings.js" defer></script>
+    <script src="pingo.js" defer></script>
+    <script src="card.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">pular para o conteúdo</a>
+    <noscript>
+      <p class="no-script">Esse jardim precisa de JavaScript para florescer. Ative-o no navegador e volte para receber sua surpresa. 🌻</p>
+    </noscript>
+    <div class="shell" id="app">
+      <header>
+        <span class="brand"><span class="brand-flower" aria-hidden="true">✳</span> um jardim só seu<span class="brand-dedication">para Sara</span></span>
+        <div class="header-actions"><button class="sound" id="soundToggle" type="button" aria-pressed="false" aria-label="Ativar sons do jardim">♫ som desligado</button>
+        <button class="sound" id="restart" type="button" title="Recomeçar o jardim">↺ recomeçar</button></div>
+      </header>
+      <main id="main" tabindex="-1">
+        <section class="intro" id="intro" aria-label="Convite">
+          <div aria-hidden="true" class="cloud cloud-a"></div>
+          <div aria-hidden="true" class="cloud cloud-b"></div>
+          <div class="intro-body">
+            <div class="chapter"><span class="eyebrow-line"></span> para Sara, com carinho</div>
+            <h1>Tem um girassol<br>que sorri <em>por você.</em></h1>
+            <p>Um jardim, um pequeno amigo e algumas coisas<br class="desktop-break"> que eu queria te dizer. Tudo começa por aqui.</p>
+            <div class="invitation-action">
+              <button class="primary" id="enter" type="button">abrir o meu jardim <span aria-hidden="true">↗</span></button>
+              <span class="handwritten">é só seu, Sara ♡</span>
+            </div>
+            <div class="intro-note"><span aria-hidden="true">♫</span><small>O Pingo tem uma voz. Entre e fique à vontade para silenciá-lo.</small></div>
+          </div>
+          <div class="intro-art" aria-hidden="true">
+            <div class="art-label"><span>um pequeno jardim</span><span>para um carinho enorme</span></div>
+            <img src="assets/garden-vignette.svg" class="hero-illustration" width="640" height="720" alt="" fetchpriority="high">
+            <div class="gate"><div class="gate-post"></div><div class="gate-door left"></div><div class="gate-door right"></div><div class="gate-post"></div></div>
+            <span class="art-caption">onde o carinho cria raízes.</span>
+          </div>
+        </section>
+        <section class="garden hidden" id="garden" aria-label="Jardim interativo">
+          <div class="garden-heading">
+            <div class="garden-title-block">
+            <div class="chapter">01 — o seu cantinho</div>
+            <span class="tiny">pode chegar mais perto, Sara.</span>
+            <h2>Um pouquinho de <em>sol</em>,<br>um pouquinho de carinho.</h2>
+            <p>Esse é o Pingo. Ele está meio tímido, mas estava esperando por você.</p>
+            </div>
+            <div class="progress-wrap">
+              <span>luz do jardim</span>
+              <span id="count">0 / 4</span>
+              <div class="track" role="progressbar" aria-label="Luz do jardim" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0" id="progress">
+                <div class="fill" id="fill"></div>
+              </div>
+            </div>
+          </div>
+          <div class="garden-workspace">
+            <div class="garden-stage">
+          <div class="scene" id="scene">
+            <div class="sun" id="sun" aria-hidden="true">
+              <img class="illustration " src="assets/icons/sun.svg" width="76" height="76" alt="" aria-hidden="true" draggable="false">
+            </div>
+            <div aria-hidden="true" class="cloud mini c1"></div>
+            <div aria-hidden="true" class="cloud mini c2"></div>
+            <div class="hill hill-back"></div>
+            <div class="hill hill-front"></div>
+            <span class="butterfly" aria-hidden="true"><img class="illustration " src="assets/icons/butterfly.svg" width="48" height="48" alt="" aria-hidden="true" draggable="false"></span>
+            <span class="butterfly companion" aria-hidden="true"><img class="illustration" src="assets/icons/butterfly.svg" width="36" height="36" alt="" draggable="false"></span>
+            <span aria-hidden="true" class="spark s1">✦</span>
+            <span aria-hidden="true" class="spark s2">✧</span>
+            <span aria-hidden="true" class="spark s3">✦</span>
+            <div class="flower flower-left">
+              <button class="bloom pink hidden-flower" id="hiddenFlower" type="button" aria-label="Descobrir um segredo nesta flor" aria-expanded="false" aria-controls="flowerSecret">✿</button>
+              <div class="stem" aria-hidden="true"></div>
+              <div class="leaf" aria-hidden="true"></div>
+            </div>
+            <div class="flower flower-right" aria-hidden="true">
+              <div class="bloom lilac">✿</div>
+              <div class="stem"></div>
+              <div class="leaf"></div>
+            </div>
+            <div class="sunflower" id="sunflower" role="group" aria-label="Pingo, um girassol esperando para florescer">
+              <div class="flower-top" id="flowerTop">
+                <div class="petals" id="petals"></div>
+                <div class="face">
+                  <span class="eye eye-left"></span>
+                  <span class="eye eye-right"></span>
+                  <span class="smile"></span>
+                  <span class="blush blush-left"></span>
+                  <span class="blush blush-right"></span>
+                </div>
+              </div>
+              <div class="sunflower-stem"></div>
+              <div class="sunflower-leaf leaf-left"></div>
+              <div class="sunflower-leaf leaf-right"></div>
+              <button class="pingo-touch" id="pingoTouch" type="button" aria-label="Conversar com o Pingo" aria-controls="pingoText"><span class="pingo-name">Pingo ♡</span></button>
+            </div>
+            <span class="garden-note" aria-hidden="true"><img class="illustration " src="assets/icons/letter.svg" width="46" height="46" alt="" aria-hidden="true" draggable="false"></span>
+            <div class="garden-ground"></div>
+            <div class="effects" id="effects" aria-hidden="true"></div>
+            <div class="meadow" id="meadow" aria-hidden="true"></div>
+            <div class="tool-row" id="tools">
+              <button class="tool" data-action="water">
+                <span class="tool-icon"><img class="illustration " src="assets/icons/bucket.svg" width="32" height="32" alt="" aria-hidden="true" draggable="false"></span>
+                <strong>Regar</strong>
+                <small>um carinho</small>
+              </button>
+              <button class="tool" data-action="sun">
+                <span class="tool-icon"><img class="illustration " src="assets/icons/sun.svg" width="32" height="32" alt="" aria-hidden="true" draggable="false"></span>
+                <strong>Solzinho</strong>
+                <small>mais luz</small>
+              </button>
+              <button class="tool" data-action="butterfly">
+                <span class="tool-icon"><img class="illustration " src="assets/icons/butterfly.svg" width="32" height="32" alt="" aria-hidden="true" draggable="false"></span>
+                <strong>Borboleta</strong>
+                <small>uma surpresa</small>
+              </button>
+              <button class="tool" data-action="note">
+                <span class="tool-icon"><img class="illustration " src="assets/icons/letter.svg" width="32" height="32" alt="" aria-hidden="true" draggable="false"></span>
+                <strong>Bilhetinho</strong>
+                <small>um segredo</small>
+              </button>
+            </div>
+          </div>
+              <div class="scene-caption"><span>✦ um carinho de cada vez</span><span>toque no Pingo para conversar</span></div>
+            </div>
+            <div class="conversation-column">
+          <aside class="pingo-bubble" aria-label="Uma conversa com o Pingo">
+            <div class="pingo-caption"><span class="pingo-dot" aria-hidden="true"></span> uma conversa com o Pingo</div>
+            <h3 class="pingo-heading">Pequeno girassol.<br><em>Muito a dizer.</em></h3>
+            <p id="pingoText" role="status" aria-live="polite" aria-atomic="true">Você deve ser a Sara… ele me falou de você. Eu sou o Pingo, e esse cantinho é seu.</p>
+            <div class="pingo-controls"><button class="pingo-listen" id="pingoListen" type="button">silenciar o Pingo ♫</button><button class="plain pingo-skip" id="pingoSkip" type="button">pular fala ↗</button><small id="pingoVoiceHint">Pingo fala a cada carinho. Você pode silenciá-lo quando quiser.</small></div>
+          </aside>
+          <p class="flower-secret hidden" id="flowerSecret" role="status">Sara, esse não é o primeiro girassol dessa história. Uma vez, eu fiz um girassol interativo pra você. Quando pensei em uma surpresa de novo, foi nele que pensei. Esse jardim guarda um pedacinho daquela lembrança. ♡</p>
+          <details class="care-message hidden" id="careMessage"><summary>ler o carinho que ficou aqui ♡</summary><h3 id="careTitle"></h3><p id="careText"></p></details>
+          <div class="hint" id="hint">Toque nos quatro itens para cuidar do jardim 🌱</div>
+          <button id="finalButton" class="primary final-trigger hidden">ver o que floresceu ♡</button>
+            </div>
+          </div>
+        </section>
+        <section class="farewell hidden" id="farewell" aria-labelledby="farewellTitle">
+          <span class="chapter">um último recadinho do Pingo</span>
+          <img class="farewell-flower" src="assets/icons/sunflower.svg" width="96" height="96" alt="">
+          <h2 id="farewellTitle">Eu floresci.<br>Agora é com <em>ele.</em></h2>
+          <p id="farewellText">Sara, minha parte era florescer. Agora tem uma coisa que ele queria te dizer. Obrigado por cuidar de mim.</p>
+          <button class="pingo-listen" id="farewellListen" type="button">silenciar o Pingo ♫</button>
+          <button class="plain pingo-skip" id="farewellSkip" type="button">pular fala ↗</button>
+          <button class="primary" id="openFinalLetter" type="button">abrir a sua carta ♡</button>
+          <button class="plain" id="farewellBack" type="button">ficar mais um pouquinho no jardim</button>
+        </section>
+        <section class="finale hidden" id="finale">
+          <span class="tiny">uma carta para guardar</span>
+          <div class="letter-salutation">Querida Sara,</div>
+          <div class="final-sunflower" aria-hidden="true"><img class="illustration " src="assets/icons/sunflower.svg" width="104" height="104" alt="" aria-hidden="true" draggable="false"></div>
+          <h2>Algumas coisas bonitas<br>merecem <em>florescer de novo.</em>
+          </h2>
+          <p>Eu lembro do primeiro girassol que fiz pra você. Quando pensei em te preparar outra surpresa, voltei pra ele quase sem perceber. Acho que, no fundo, eu queria encontrar um jeito de dizer uma coisa que tenho sentido desde que a gente voltou a conversar: <strong>eu estava com saudade de você, Sara.</strong></p>
+          <p>Saudade de conversar sem ficar querendo que a conversa acabasse. De ter vontade de contar uma coisa boba do meu dia só porque era pra você. De ler uma mensagem sua e sorrir antes mesmo de pensar no que responder. Tem sido bom sentir tudo isso de novo. Bom a ponto de eu querer ser mais sincero sobre o quanto você ainda mexe comigo.</p>
+          <p>Fazer esse jardim foi gostoso, mas também me deixou pensando no que eu queria de verdade: poder ver seu sorriso de perto, ouvir sua voz, demorar num abraço seu. Estar com você sem precisar encontrar uma desculpa pra isso. <strong>Eu sinto falta da sua presença. E tenho vontade de voltar a fazer parte dos seus dias.</strong></p>
+          <p>Não quero fingir que o tempo não passou, nem que a gente pode simplesmente continuar de onde parou. Mas eu queria te conhecer de novo. Saber quem você se tornou, te contar quem eu sou hoje e descobrir o que ainda existe entre nós quando a gente se permite chegar um pouco mais perto.</p>
+          <p>Então vou deixar aqui, com um friozinho na barriga, o que esse girassol sozinho não consegue dizer: <strong>eu tenho vontade de recomeçar com você.</strong> De te chamar pra sair, de olhar nos seus olhos, de criar lembranças novas. De fazer planos pequenos e ficar feliz quando chega o dia de te encontrar.</p>
+          <p>Não sei se essa vontade também mora aí. Eu gostaria muito de descobrir. Por enquanto, quis que você soubesse da minha, sem precisar adivinhar por trás de uma brincadeira ou de um jardim. Você continua sendo alguém que eu quero por perto, Sara. E eu adoraria ter a chance de te mostrar isso.</p>
+          <div class="signature">Se também existir um pouquinho de saudade aí,<br>eu quero muito te ver. <span>♡</span>
+            <small>Com saudade e vontade de nós,<br>seu engenheiro eletricista.</small>
+          </div>
+          <button class="secondary" id="extra" aria-expanded="false" aria-controls="secret">psiu... tem um segredinho ↗</button>
+          <p class="secret hidden" id="secret">Confissão: eu fiquei imaginando você abrindo esse jardim… mas a cena que eu mais queria era outra: você na minha frente, e eu finalmente podendo te dar aquele abraço demorado que ficou fazendo falta. ♡</p>
+          <div class="keepsake">
+            <span class="tiny">um pedacinho daqui, com você</span>
+            <h3>O Pingo pode ir com você.</h3>
+            <p>Uma lembrança desse cantinho, feita só pra Sara.</p>
+            <a class="keepsake-preview" href="assets/sara-pingo.png" target="_blank" rel="noopener" aria-label="Ver o cartão da Sara em tamanho completo"><img src="assets/sara-pingo.png" width="360" height="480" loading="lazy" alt="Cartão para Sara com o Pingo e a frase: Algumas coisas bonitas merecem florescer de novo."></a>
+            <a class="secondary download-card" href="assets/sara-pingo.png" download="um-girassol-para-Sara.png">guardar meu cartão ↓</a>
+            <button class="secondary hidden" id="shareCard" type="button">compartilhar meu cartão ↗</button>
+            <p class="share-status" id="shareStatus" role="status"></p>
+            <small>No celular, você também pode abrir a imagem e mantê-la pressionada para salvar.</small>
+          </div>
+          <button class="plain" id="backGarden">voltar pro jardim ↶</button>
+        </section>
+      </main>
+      <footer>feito por um engenheiro eletricista com saudade de você ♡</footer>
+    </div>
+    <div class="modal-backdrop hidden" id="modal" role="presentation">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalText">
+        <button class="modal-close" id="closeModal" aria-label="Fechar">×</button>
+        <div class="modal-icon" id="modalIcon" aria-hidden="true"></div>
+        <h3 id="modalTitle">
+        </h3>
+        <p class="letter-pingo" id="letterPingo"></p>
+        <button class="plain pingo-skip" id="modalSkip" type="button">pular fala do Pingo ↗</button>
+        <button class="envelope hidden" id="openLetter" type="button" aria-label="Abrir o bilhetinho"><span class="envelope-back" aria-hidden="true"><span class="envelope-paper">♡</span><span class="envelope-flap"></span><span class="envelope-front"></span><span class="envelope-seal">♡</span></span><span class="envelope-caption">toque para abrir seu bilhete</span></button>
+        <div id="letterContent"><p id="modalText"></p><button class="primary" id="modalOk">guardar esse carinho ♡</button></div>
+      </div>
+    </div>
+  </body>
+</html>
+
